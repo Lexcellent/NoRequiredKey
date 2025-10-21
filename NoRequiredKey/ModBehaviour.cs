@@ -51,7 +51,7 @@ namespace NoRequiredKey
                     // 使用 AccessTools.Property.Getter 获取属性的 Getter 方法
                     var cachedMetaGetter = AccessTools.PropertyGetter(typeof(InteractableBase), "CachedMeta");
                     var itemMetaData = (ItemMetaData)cachedMetaGetter.Invoke(__instance, Array.Empty<object>());
-                    if (itemMetaData.Catagory == "Key")
+                    if (itemMetaData.Catagory == "Key" || itemMetaData.Catagory == "SpecialKey")
                     {
                         __instance.requireItem = false;
                         __result = (true, (Item) null);
